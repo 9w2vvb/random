@@ -19,7 +19,7 @@ server {
 
         server_name DOMAIN.NAME.net;
         ssl_certificate /full/path/to/cert.pem;
-        ssl_certificate_key /full/path/to/key.pem;
+        ssl_certificate_key /full/path/to/cert.key;
         ssl_trusted_certificate /full/path/to/fullchain.pem;
 
         ssl_protocols TLSv1.2;
