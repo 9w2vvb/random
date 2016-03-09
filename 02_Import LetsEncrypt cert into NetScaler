@@ -1,0 +1,47 @@
+# Steps to Import LetsEncrypt PEM certificate into NetScaler
+# work in progress
+
+# check if web server is running on Port 80; and stop it
+#
+# $ sudo netstat -na | grep ':80.*LISTEN'
+# $ service nginx status
+# $ service nginx stop
+
+# run LetsEncrypt agent
+#
+# $ cd /opt/letsencrypt
+# $ sudo ./letsencrypt-auto certonly --standalone
+
+# check certificate file is successfully created under /etc/letsencrypt/archive
+# with symbolic link created at /etc/letsencrypt/live/
+
+# NetScaler support PEM certificate format
+# there is no need to convert the PEM cert to another format to import it to NetScaler
+#
+# We only need to remove the passphrase from an existing OpenSSL key file
+# refer http://www.microhowto.info/howto/remove_the_passphrase_from_an_existing_openssl_key_file.html
+
+# Steps
+# to remove passphrase from key file:
+# $ openssl rsa -in /location/of/certificate_key.pem -out /location/of/certificate.key
+
+# then on NetScaler, go to Configuration \ Traffic Management \ SSL \ Certificates \ Install
+# install the certificate chain first with the following value (example):
+# Certificate-Key Pair Name*: domain.com.chain
+# Certificate File Name*: chain1.pem
+# Certificate Format: PEM
+# Password: <leave blank>
+# and click Install
+
+# follow the same steps as above to install domain.com certificate
+# sample value:
+# Certificate-Key Pair Name*: domain.com
+# Certificate File Name*: cert1.pem
+# Key File Name: certificate.key
+# Certificate Format: PEM
+# Password: <leave blank>
+# and click Install
+
+# once domain.com certificate is installed, right-click on it and link to domain.com.chain
+
+# Fin
