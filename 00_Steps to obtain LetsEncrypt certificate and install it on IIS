@@ -20,7 +20,7 @@
 	--- click Agree on Term of Services
 	--- enter your domain name
 	--- e.g mydomain.com sub.mydomain.com www.mydomain.com
-    --- if everything is successful, you should see an output message that congratulate you on certificate issuance
+        --- if everything is successful, you should see an output message that congratulate you on certificate issuance
 	--- LetsEncrypt will validate that A record is created for the domain, if it failed you need to fix the record in your domain manager e.g Godaddy etc
 
 5. Check the certificate files
@@ -29,12 +29,12 @@
 	--- chain.pem: The Let's Encrypt chain certificate 	/* for easy identification, rename it to mydomain.com.chain.pem */
 	--- fullchain.pem: cert.pem and chain.pem combined	/* for easy identification, rename it to mydomain.com.fullchain.pem */
 	--- privkey.pem: Your certificate's private key		/* for easy identification, rename it to mydomain.com.key */
-    --- these files are located in /etc/letsencrypt/archive with symbolic link created at /etc/letsencrypt/live/domain_name
+        --- these files are located in /etc/letsencrypt/archive with symbolic link created at /etc/letsencrypt/live/domain_name
 
 6. Convert the PEM files to IIS format (.pfx)
 	  $ sudo openssl pkcs12 -export -out mydomain.com.pfx -inkey mydomain.com.key -in mydomain.com.pem -certfile mydomain.com.fullchain.pem
 	--- enter password as required
-    --- check the current directory, there is now mydomain.com.pfx created
+        --- check the current directory, there is now mydomain.com.pfx created
 	--- you can use the .pfx file to import it in certmgr.msc and bind it in IIS
 
 7. Fin
