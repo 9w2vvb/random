@@ -1,0 +1,19 @@
+# Aircraft are designated according to the intended mission of the aircraft.
+A= attack aircraft
+B= bombers
+C= cargo
+E= electronic countermeasure
+F= fighter
+H= helicopter
+O= observaton
+P= patrol
+R= reconnaisance
+S= anti-submarine or special mission
+T= trainer
+U= utility
+V= vertical/short take-off
+X= experimental
+Y= prototype
+
+-- /u/cakefraustin
+
