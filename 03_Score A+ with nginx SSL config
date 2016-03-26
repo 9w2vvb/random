@@ -20,7 +20,8 @@ server {
         server_name DOMAIN.NAME.net;
         ssl_certificate /full/path/to/cert.pem;
         ssl_certificate_key /full/path/to/cert.key;
-        ssl_trusted_certificate /full/path/to/fullchain.pem;
+        ssl_trusted_certificate /full/path/to/fullchain.pem; #not used for nginx v1.9.10 anymore
+        # for nginx v1.9.10, supply fullchain.pem to combine both server certificate and chain cerfiticate under ssl_certificate perimeter
 
         ssl_protocols TLSv1.2;
 
