@@ -1,4 +1,4 @@
-# git help for freebsd
+##### git help for freebsd
 
 # to install git on freebsd
 ## cd /usr/ports/devel/git
@@ -15,7 +15,11 @@
 # test git connection
 ## ssh -T git@github.com
 
-# change user info
+##### change user info
 ## pw usermod [username] -c "Full Name, Location, Work Phone, Home Phone"
 
+<<<<<<< HEAD
 nice
+=======
+-73-
+>>>>>>> 3d2e071f5ad0d84224dec77589662d279bae41bb
