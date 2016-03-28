@@ -17,3 +17,5 @@
 
 # change user info
 ## pw usermod [username] -c "Full Name, Location, Work Phone, Home Phone"
+
+nice
