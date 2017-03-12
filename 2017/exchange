@@ -1,0 +1,12 @@
+# changing the scope so you can view the entire domain
+2007 =
+ $AdminSessionADSettings.ViewEntireForest = $true
+2010 =
+ Set-AdServerSettings -ViewEntireForest $True
+
+# View Mailbox Sizes and Mailbox Quotas Using Windows PowerShell
+ref: https://msdn.microsoft.com/en-us/library/gg576861(v=exchsrvcs.149).aspx
+ Get-MailboxStatistics "name" | Format-List StorageLimitStatus,TotalItemSize,TotalDeletedItemSize,ItemCount,DeletedItemCount
+ Get-Mailbox "Tamara Johnston" | Format-List *Quota
+
+
