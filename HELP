@@ -1,0 +1,27 @@
+# Some basic manual for Git
+# where I stored some useful commands and notes
+# book reference: https://git-scm.com/book/en/v2
+
+1 --- To create a new repository on the command line
+
+$ echo "# random" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/9w2vvb/random.git
+$ git push -u origin master
+
+2 --- To push an existing repository from the command line
+
+$ git remote add origin https://github.com/9w2vvb/random.git
+$ git push -u origin master
+
+3 --- Git repair permission
+# url http://stackoverflow.com/questions/6448242/git-push-error-insufficient-permission-for-adding-an-object-to-repository-datab 
+$ cd /path/to/repo.git
+$ chgrp -R groupname .
+$ chmod -R g+rwX .
+$ find . -type d -exec chmod g+s '{}' +
+
+# fin
+
