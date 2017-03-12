@@ -1,3 +1,5 @@
+# exchange generals
+#
 # changing the scope so you can view the entire domain
 2007 =
  $AdminSessionADSettings.ViewEntireForest = $true
