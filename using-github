@@ -1,0 +1,14 @@
+# do git config
+# create ssh key
+# cd to /project
+# do
+## git init
+## git add *
+## git commit -am "some comments"
+## git status
+
+# download repo
+## git pull origin master
+
+# upload repo
+## git push origin master
