@@ -18,3 +18,29 @@ Get-Mailbox -ResultSize unlimited |
  Export-Csv C:\Temp\MailboxSizes.CSV –NoTypeInformation –Encoding UTF8
 #
 
+# test 1
+# assuming the csv file has samaccountname header
+$users = import-csv user.csv
+
+@(foreach ($user in $users) {
+    get-mailbox $user.samaccountname | select-object DisplayName, @{name="TotalItemSize(MB)";expression={(get-mailboxstatistics $_).TotalItemSize.Value.ToMB()}}, *quota*
+}) | Export-Csv UserMailboxSizes.csv -NoTypeInformation
+
+# test 2 (same as test 1)
+import-csv user.csv | ForEach-Object {get-mailbox $_.samaccountname | select-object DisplayName, @{name="TotalItemSize(MB)";expression={(get-mailboxstatistics $_).TotalItemSize.Value.ToMB()}}, *quota*} | Export-Csv UserMailboxSizes.csv -NoTypeInformation
+
+# test 3
+# assuming the csv file has emailaddress header
+$users = (import-csv "user.csv")
+foreach ($user in $users){
+    $userResults = Get-Mailbox $user | Select DisplayName,IssueWarningQuota,ProhibitSendQuota,UseDatabaseQuotaDefaults,@{label="TotalItemSize(MB)";expression={(get-mailboxstatistics $_).TotalItemSize.Value.ToMB()}}
+    $userResults | Export-Csv "UserMailboxSizes.csv" -NoType -Append
+}
+
+# test 4 (same as test 3)
+$users = (import-csv "user.csv")
+foreach ($user in $users){
+    $userResults = Get-Mailbox $user | where{$_.UseDatabaseQuotaDefaults -eq $False} | Select DisplayName,IssueWarningQuota,ProhibitSendQuota,UseDatabaseQuotaDefaults,@{label="TotalItemSize(MB)";expression={(get-mailboxstatistics $_).TotalItemSize.Value.ToMB()}}
+    IF($userresults){$userResults | Export-Csv "UserMailboxSizes.csv" -NoType -Append}
+}
+
