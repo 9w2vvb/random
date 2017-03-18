@@ -18,4 +18,7 @@ openssl x509 -noout -fingerprint -sha1 -inform pem -in [certificate-file.crt]
 #MD5
 openssl x509 -noout -fingerprint -md5 -inform pem -in [certificate-file.crt]
 
+# convert .pem to .pfx for IIS
+openssl pkcs12 -export -out mydomain.com.pfx -inkey mydomain.com.key -in mydomain.com.pem -certfile mydomain.com.fullchain.pem
+
 # fin
