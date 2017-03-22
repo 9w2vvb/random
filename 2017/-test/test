@@ -1,1 +1,6 @@
-vi
+1.3.6.1.4.1.11129.2.4.2
+# what is
+The OID (1.3.6.1.4.1.11129.2.4.2) indicates that a certificate has CT enabled.  An OID (Object Identifier) is a numeric value that is used to determine whether a certificate is valid for a particular use.  By viewing the certificate details, this field can be found on any CT enabled certificate.  If this OID is not present, the certificate does not have CT enabled.
+
+# Certificate Transparency
+https://tools.ietf.org/html/rfc6962
