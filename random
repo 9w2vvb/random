@@ -17,3 +17,29 @@ Y= prototype
 
 -- /u/cakefraustin
 
+# added 20170423 Sun
+#
+# information request:
+cat /proc/meminfo
+cat /proc/cpuinfo
+cat /etc/security/limits*
+cat /var/lib/pgsql/9.6/data/postgresql.conf  # CentOS/RHEL
+cat /etc/postgresql/9.6/main/postgresql.conf # Debian
+cat /etc/fstab
+cat /etc/redhat-release  # CentOS/RHEL
+cat /etc/debian_version  # Debian
+mount
+systemctl zram status
+lsblk
+pvdislay
+vgdisplay
+lvdisplay
+lsmod
+/sbin/sysctl -a
+fdisk -l /dev/<fill and repeat for each of your disks i.e. sda>
+blockdev --get-ra /dev/<disk>  # For each of your mounted disks
+smartctl -a /dev/<whatever your first disk is, i.e. sda
+rpm -qa | geel -iE ‘postgres|kernel|psql|e2fs|ext|xfs|btrfs’ # CentOS/RHEL
+dpkg --list | grep -iE ‘postgres|linux-image|psql|e2fs|ext|xfs|btrfs’ # Debian
+#
+#
