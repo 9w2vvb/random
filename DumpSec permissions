@@ -1,9 +1,13 @@
 # DumpSec permissions (hex)
 # -------------------------
-# notes: when you see hex codes, it means that the permission are note the "standard" ones, but a combination that can't be listed with the simple RWXD value. you can check the folder for the permission conbination that's actually configured.
-# DumpSec can't readily be fixed for this, as it was designed in a time when security settings were more simple, like read, write, execute, and delete. With the new security settings added on Windows 2000, DumpSec doesn't know how to report them.
-# The codes of ax00000002 and ax00000004 are most likely caused by the propagation information that applies to those specific permissions. ax00000002 generally indicates a container inheritance ACE while ax00000004 generally indicates a non-propagated inheritance ACE.
-# DumpSec was designed before the addition of the new inheritance features and these changes make its way of reporting security difficult to apply.
+# Notes: when you see hex codes, it means that the permission are note the "standard" ones, but a combination that can't be listed with 
+# the simple RWXD value. you can check the folder for the permission conbination that's actually configured.
+# DumpSec can't readily be fixed for this, as it was designed in a time when security settings were more simple, like read, write, execute, 
+# and delete. With the new security settings added on Windows 2000, DumpSec doesn't know how to report them.
+# The codes of ax00000002 and ax00000004 are most likely caused by the propagation information that applies to those specific permissions. 
+# ax00000002 generally indicates a container inheritance ACE while ax00000004 generally indicates a non-propagated inheritance ACE.
+# DumpSec was designed before the addition of the new inheritance features and these changes make its way of reporting security difficult 
+# to apply.
 # -------------------------
 #
 # Dir: C:\TEMP\PERMISSION
