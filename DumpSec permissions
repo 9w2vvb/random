@@ -1,0 +1,19 @@
+# DumpSec permissions (hex)
+# Dir: C:\TEMP\PERMISSION
+#
+Full control				all
+Traverse folder / execute file		ax00100020
+List folder / read data			ax00100001
+Read attributes				ax00100080
+Read extended attributes		ax00100008
+Create files / write data		ax00100002
+Create folders / append data		ax00100004
+Write attributes			ax00100100
+Write extended attributes		ax00100010
+Delete subfolders and files
+Delete
+Read permission
+Change permission
+Take ownership				ax00180000
+					ax00100006
+#
