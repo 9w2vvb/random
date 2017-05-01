@@ -42,18 +42,28 @@ smartctl -a /dev/<whatever your first disk is, i.e. sda
 rpm -qa | geel -iE ‘postgres|kernel|psql|e2fs|ext|xfs|btrfs’ # CentOS/RHEL
 dpkg --list | grep -iE ‘postgres|linux-image|psql|e2fs|ext|xfs|btrfs’ # Debian
 #
-#
+
 # X400 value in Exchange
 # Sample: X400:C=US,A= ;P=ABCD;O=HeadOffice;S=Surname;G=Givenna,e;I=Initials;
 #
-# X.400 can contain more elements, the most common ones being:
-# C – Country name;
-# A or ADMD – Administration Management Domain, usually a public mail service provider;
-# P or PRMD – Private Management Domain (your Exchange Organization);
-# O – Organization name (which corresponds to the Exchange Administrative Group);
-# OU – Organizational Unit Names;
-# G – Given name;
-# I – Initials;
-# S – Surname.
+ X.400 can contain more elements, the most common ones being:
+ C – Country name;
+ A or ADMD – Administration Management Domain, usually a public mail service provider;
+ P or PRMD – Private Management Domain (your Exchange Organization);
+ O – Organization name (which corresponds to the Exchange Administrative Group);
+ OU – Organizational Unit Names;
+ G – Given name;
+ I – Initials;
+ S – Surname.
 # From: http://techgenix.com/x400-addresses-exchange-2010-part1/
+#
+
+# from Sami Laiho
+cd C:\Windows\System32
+copy sethc.exe C:\Windows
+copy cmd.exe sethc.exe # (Overwrite: Y)
+exit
+reboot
+press Shift key 5x or more on login screen
+it will launch cmd
 #
