@@ -1,4 +1,10 @@
 # notes on STARTTLS
+# related RFC
+RFC 7817
+Updated Transport Layer Security (TLS) Server Identity Check Procedure for Email-Related Protocols, MARCH 2016
+#
+RFC 3207
+SMTP Service Extension for Secure SMTP over Transport Layer Security, FEBRUARY 2002
 #
 # from: https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what
 STARTTLS is an opportunistic encryption system, which encrypts communications between email servers that use the Simple Mail Transfer Protocol (SMTP) standard.
