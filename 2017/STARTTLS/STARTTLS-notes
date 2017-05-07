@@ -1,0 +1,9 @@
+# notes on STARTTLS
+#
+# from: https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what
+STARTTLS is an opportunistic encryption system, which encrypts communications between email servers that use the Simple Mail Transfer Protocol (SMTP) standard.
+When a user emails someone on a different provider (say, a Hotmail user writing to a Gmail user), the mail message will have to be delivered over the Internet.
+If both email servers understand STARTTLS, then the communications will be encrypted in transit. 
+If only Gmail does but Hotmail does not (the current situation), they will be in the clear and exposed to eavesdropping, 
+so it’s critical to get as many email service providers as possible to implement the system.
+#
