@@ -210,10 +210,11 @@ Test.User1@DeathStar.co.uk
 Test.User2@DeathStar.co.uk
 Test.User3@DeathStar.co.uk
 #
-# CSV file format (add-ons)
+<# CSV file format (add-ons)
 sAMAccountName,mail,RegistrarPool,sipAddress,ConferencingPolicy,ClientPolicy,ExternalAccessPolicy
 Test1,Test.User1@DeathStar.co.uk,LyncPool.ds.co.uk,Test.User1@DeathStar.co.uk,All Conferencing Facilities,SkypeSkin,Full External Access
 Test2,Test.User2@DeathStar.co.uk,LyncPool.ds.co.uk,Test.User2@DeathStar.co.uk,All Conferencing Facilities,SkypeSkin,Full External Access
 Test3,Test.User3@DeathStar.co.uk,LyncPool.ds.co.uk,Test.User3@DeathStar.co.uk,No Conferencing,LyncSkin,No External Access
-#
+#>
+
 # EOF

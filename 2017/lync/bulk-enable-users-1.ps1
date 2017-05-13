@@ -21,7 +21,9 @@ Enable-csuser -identity $c.Identity -registrarpool $c.RegistrarPool –sipaddres
 }
 
 #
-# CSV file format
+<# CSV file format
 Identity,RegistrarPool,SIPAddressType,SipDomain
 John Doe,PoolFQDN.Domain.com,EmailAddress,SIPDomain.com
-#
+#>
+
+# EOF

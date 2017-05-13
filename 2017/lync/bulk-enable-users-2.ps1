@@ -31,7 +31,9 @@ Grant-CsVoicePolicy -Identity $c.Identity -PolicyName $c.VoicePolicy
 }
 #
 
-# CSV file format
+<# CSV file format
 Identity,RegistrarPool,SIPAddressType,SipDomain,PhoneNumber,Extension,DialPlan,VoicePolicy
 John Doe,PoolFQDN.Domain.com,EmailAddress,SIPDomain.com,2815551234,1234,HoustonDialPlan,HoustonVoicePolicy
-# 
+#>
+
+# EOF 
