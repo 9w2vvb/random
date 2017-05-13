@@ -1,0 +1,11 @@
+# Get bitcoin value (multiple)
+#
+curl -s "https://blockchain.info/q/getreceivedbyaddress/\
+115p7UMMngoj1pMvkpHijcRdfJNXj6LrLn|\
+13AM4VW2dhxYgXeQepoHkHSQuy6NgaEb94|\
+12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw|\
+1QAc9S5EmycqjzzWDc1yiWzr9jJLC8sLiY" |
+python -c 'import sys; r = sys.stdin.readline(); print float(r) / 100000000'
+#
+
+# EOF
