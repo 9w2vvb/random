@@ -1,3 +1,4 @@
+# From https://twitter.com/bl4sty/status/863143484919828481
 # Get bitcoin value (multiple)
 #
 curl -s "https://blockchain.info/q/getreceivedbyaddress/\
