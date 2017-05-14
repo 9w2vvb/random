@@ -10,6 +10,13 @@ ls "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters"
 # (it's all the same)
 # look for value: SMBv1
 
+# or
+Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters"
+# look for value: SMB1 = 0
+
+# if value is 1 = Enabled
+# to disable it run
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
 
 # For Windows 8/Server 2012 and above
 Get-SMBServerConfiguration
