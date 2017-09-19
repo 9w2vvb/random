@@ -10,3 +10,4 @@ dir . | Foreach-Object {
   Name = $fileinfo.Name
  }
 } | fl
+# change Algorithm to (supported): "MACTripleDES", "MD5", "RIPEMD160", "SHA1", "SHA256", "SHA384", "SHA512".
